@@ -17,7 +17,7 @@ interface IDefaultTextFieldProps{
 const DefaultTextField = ({errorMessage,iconPath,onIconClick,placeholder,onChange,value,alt,isError,id} : IDefaultTextFieldProps) => {
     const [isFocused, setIsFocused] = useState(false);
     return (
-        <>
+        <div className="relative">
             <div
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
@@ -25,10 +25,8 @@ const DefaultTextField = ({errorMessage,iconPath,onIconClick,placeholder,onChang
                 <input id={id} className="outline-none" placeholder={placeholder} value={value} type="text" onChange={onChange}/>
                 {!!value && <IconButton onClick={onIconClick} alt={alt} iconpath={iconPath}/>}
             </div>
-            <div>
-                {isError && <ErrorMessage>{errorMessage}</ErrorMessage> }
-            </div>
-        </>
+            {isError && <ErrorMessage>{errorMessage}</ErrorMessage> }
+        </div>
         
     );
 }

@@ -33,6 +33,7 @@ function App() {
         alt='delete'
         onChange={() => {}}
         onIconClick={() => {}} />
+        <div className='my-20'></div>
       <button
           onClick={() => setIsError(prev => !prev)}
         >에러 토글</button>

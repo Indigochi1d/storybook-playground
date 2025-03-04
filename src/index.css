@@ -20,7 +20,10 @@
   --font-regular: 400;
 }
 
-
 body {
   font-family: "Noto Sans KR";
+}
+
+.relative > p {
+  position: absolute;
 }
