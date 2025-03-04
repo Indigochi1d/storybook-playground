@@ -27,3 +27,7 @@ body {
 .relative > p {
   position: absolute;
 }
+
+.navigation-title-wrapper > button {
+  margin-right: 12px;
+}

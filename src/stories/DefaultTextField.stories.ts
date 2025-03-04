@@ -35,28 +35,30 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default : Story = {
-    args:{
+    args:{  
         errorMessage: 'Error Message',
-        iconPath: "/cancel_2.svg",
+        iconPath: "/cancel.svg",
         onIconClick: () => {},
         placeholder: '텍스트를 입력해주세요',
         onChange: () => {},
         value: '',
         alt: 'Icon',
-        isError: false
+        isError: false,
+        id:'1'
     }
 }
 
 export const ErrorOn : Story = {
     args:{
         errorMessage: 'Error Message',
-        iconPath: "/cancel_2.svg",
+        iconPath: "/cancel.svg",
         onIconClick: () => {},
         placeholder: '텍스트를 입력해주세요',
         onChange: () => {},
         value: '',
         alt: 'Icon',
-        isError: true
+        isError: true,
+        id:'2'
     }
 }
 
@@ -64,7 +66,7 @@ export const ValueOn : Story = {
     args:{
         id: 'email',
         errorMessage: 'Error Message',
-        iconPath: "/cancel_2.svg",
+        iconPath: "/cancel.svg",
         onIconClick: () => {},
         placeholder: '텍스트를 입력해주세요',
         onChange: () => {},
