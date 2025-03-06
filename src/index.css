@@ -8,6 +8,8 @@
   --color-mono100: #f1f1f1;
   --color-mono200: #bebebe;
   --color-mono300: #d6d7d9;
+  --color-dark-opacity: rgba(255, 255, 255, 0.1);
+  --color-social : #395997;
   --font-xs: 12px;
   --line-xs: 18px;
   --font-sm: 14px;
@@ -18,6 +20,13 @@
   --line-xl: 36px;
   --font-bold: 700;
   --font-regular: 400;
+  --rounded-tag-button: 17.5px;
+}
+
+@layer utilities {
+  .rounded-tag-button {
+    border-radius: var(--rounded-tag-button);
+  }
 }
 
 body {

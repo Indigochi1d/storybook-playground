@@ -1,43 +1,15 @@
-import { useState } from 'react'
 import './App.css'
-import DefaultTextField from './components/DefaultTextField'
-import Label from './components/Label'
+import TagList from './components/TagList'
 
 function App() {
-  const [isError, setIsError] = useState(false)
 
   return (
-    <>
-      <Label htmlFor="email">이메일</Label>
-      <DefaultTextField 
-        id="email"
-        placeholder='이메일을 입력해주세요'
-        value=''
-        errorMessage='이메일을 확인해주세요'
-        isError={isError}
-        iconPath='/cancel_2.svg'
-        alt='delete'
-        onChange={() => {}}
-        onIconClick={() => {}} />
-
-
-      <div className='my-20'></div>
-      <Label htmlFor="address">주소</Label>
-      <DefaultTextField 
-        id="address"
-        placeholder='주소를 입력해주세요'
-        value=''
-        errorMessage='주소를 확인해주세요'
-        isError={isError}
-        iconPath='/cancel_2.svg'
-        alt='delete'
-        onChange={() => {}}
-        onIconClick={() => {}} />
-        <div className='my-20'></div>
-      <button
-          onClick={() => setIsError(prev => !prev)}
-        >에러 토글</button>
-    </>
+    <div className='bg-primary w-screen h-screen'>
+      <TagList
+      tagList={["1~2명", "3~5명", "6~10명"]}
+      onTagClick={console.log}
+    />
+    </div>
   )
 }
 
