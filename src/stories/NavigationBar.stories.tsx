@@ -57,15 +57,3 @@ export const NoBackButton : Story ={
         onCloseButtonClick:fn()
     }
 }
-
-export const InDarkMode : Story = {
-  args:{
-    isDarkMode: true,
-    showBackButton:true,
-    showCloseButton:true,
-    showTitle:true,
-    title:"다크모드",
-    onBackButtonClick:fn(),
-    onCloseButtonClick:fn()
-  }
-}

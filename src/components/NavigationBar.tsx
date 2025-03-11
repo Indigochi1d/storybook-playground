@@ -21,16 +21,16 @@ const NavigationBar = ({
     onCloseButtonClick = ()=>{}
     }:INavigationBarProps) => {
     return (
-        <div className="flex justify-between">  
+        <header className="flex justify-between" role="banner">  
             <div className="navigation-title-wrapper flex">
                 {/* 뒤로가기 버튼 */}
                 {showBackButton && <IconButton alt="go_back" iconpath={`/back_left${isDarkMode ? "_white" : ""}.svg`} onClick={onBackButtonClick}/>}
                 {/* 페이지 이름 */}
-                {showTitle && <h1 className={`text-2xl ${isDarkMode ? "text-white" : ""} `}>{title}</h1>}
+                {showTitle && <h1 className={`text-2xl ${isDarkMode ? "text-white" : "text-primary"} `}>{title}</h1>}
             </div>
             {/* 닫기 버튼 */}
                 {showCloseButton && <IconButton alt="cancel" iconpath={`/cancel${isDarkMode ? "_white": ""}.svg`} onClick={onCloseButtonClick}/>}
-        </div>
+        </header>
     );
 };
 

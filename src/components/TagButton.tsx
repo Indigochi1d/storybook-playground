@@ -15,7 +15,7 @@ const TagButton = ({onClick,children,isChecked}:ITagButtonProps) => {
                  border
                  border-white
                  h-[33px]
-                 ${isChecked ? 'bg-white text-primary' : 'bg-dark-opacity text-white'}
+                 ${isChecked ?  'bg-dark-opacity text-white':'bg-white text-primary'}
                  text-sm
                  font-medium
                  `}
