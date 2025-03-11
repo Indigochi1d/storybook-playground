@@ -17,7 +17,7 @@ interface IDefaultTextFieldProps{
 const DefaultTextField = ({errorMessage,iconPath,onIconClick,placeholder,onChange,value,alt,isError,id} : IDefaultTextFieldProps) => {
     const [isFocused, setIsFocused] = useState(false);
     return (
-        <section className="relative" role="region" aria-labelledby={`${id}-label`}>
+        <section className="relative" aria-labelledby={`${id}-label`}>
             <div
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
