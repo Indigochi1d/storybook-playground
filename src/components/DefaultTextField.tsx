@@ -17,7 +17,7 @@ interface IDefaultTextFieldProps{
 const DefaultTextField = ({errorMessage,iconPath,onIconClick,placeholder,onChange,value,alt,isError,id} : IDefaultTextFieldProps) => {
     const [isFocused, setIsFocused] = useState(false);
     return (
-        <div className="relative">
+        <section className="relative" role="region" aria-labelledby={`${id}-label`}>
             <div
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
@@ -26,7 +26,7 @@ const DefaultTextField = ({errorMessage,iconPath,onIconClick,placeholder,onChang
                 {!!value && <IconButton onClick={onIconClick} alt={alt} iconpath={iconPath}/>}
             </div>
             {isError && <ErrorMessage>{errorMessage}</ErrorMessage> }
-        </div>
+        </section>
         
     );
 }
