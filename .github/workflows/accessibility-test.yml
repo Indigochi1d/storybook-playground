@@ -1,4 +1,4 @@
-name: 'Accessibilty Tests'
+name: 'Accessibility Tests'
 
 on: push
 
@@ -8,15 +8,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      # .nvmrc 파일을 사용해서 Node.js 버전 지정
       - uses: actions/setup-node@v4
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: '.nvmrc'  # 루트 디렉터리에 있는 .nvmrc 파일을 참조
+
       - name: Install dependencies
-        run: yarn
+        run: yarn install --frozen-lockfile
+
       - name: Install Playwright
         run: npx playwright install --with-deps
+
       - name: Build Storybook
         run: yarn build-storybook --quiet
+
       - name: Serve Storybook and run tests
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
