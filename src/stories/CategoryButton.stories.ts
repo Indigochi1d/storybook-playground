@@ -17,13 +17,15 @@ const meta = {
     iconAlt:{ control: "text" , description: "image alt", defaultValue: "icon" },
     text:{ control: "text" , description: "button text", defaultValue: "button" },
     onClick:{ action: 'clicked', description: "button click event" },
-    isDisabled:{ control: "boolean", description: "button disabled", defaultValue: false }
+    isDisabled:{ control: "boolean", description: "button disabled", defaultValue: false },
+    isDarkMode:{ control: "boolean", description: "dark mode", defaultValue: false }
   },
   args:{
     iconAlt: "icon",
     iconPath: "/ic-category.svg",
     text: "상관없음",
     isDisabled: false,
+    isDarkMode: false,
     onClick: fn()
   }
 } satisfies Meta<typeof CategoryButton>;
@@ -37,6 +39,7 @@ export const Default : Story ={
         iconPath: "/ic-category.svg",
         text: "상관없음",
         isDisabled: false,
+        isDarkMode: false,
         onClick: fn()
     }
 }
@@ -47,6 +50,19 @@ export const Disabled : Story ={
         iconPath: "/ic-category.svg",
         text: "상관없음",
         isDisabled: true,
+        isDarkMode: false,
         onClick: fn()
     }
 }
+
+export const DarkMode : Story ={
+    args:{
+        iconAlt: "icon",
+        iconPath: "/ic-category.svg",
+        text: "상관없음",
+        isDisabled: false,
+        isDarkMode: true,
+        onClick: fn()
+    }
+}
+
