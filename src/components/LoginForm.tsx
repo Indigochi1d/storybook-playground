@@ -7,7 +7,7 @@ export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     return(
-        <section>
+        <main>
             <Label htmlFor="email">이메일</Label>
             <DefaultTextField 
                 id="email"
@@ -39,6 +39,6 @@ export default function LoginForm() {
                 >
                     로그인
             </PrimaryButton>
-        </section>
+        </main>
     )
 }
