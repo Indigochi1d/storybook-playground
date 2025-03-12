@@ -26,7 +26,8 @@ const PrimaryButton = ({theme,children,onClick,isDisabled}:IPrimaryButtonProps) 
             ${color[theme]}
             `}
             disabled={isDisabled}
-            onClick={onClick}>
+            onClick={onClick}
+            >
             {children}
         </button>
     );
